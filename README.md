@@ -4,7 +4,7 @@
 ## README.md
 ## Instructions to deploy the Autoscaling group with terraform and anisble.
 
-Pre requisite
+Pre-requisites
 create an alias for the ease of use the command terraform.
 
 alias tf=terraform
@@ -143,4 +143,4 @@ prod: terraform destroy -var-file=./tfvars/prod.tfvars
 cd terraform/STAGE/dynamodb
 tf destroy --auto-approve
 
-**The end**
+**C'est Fini**

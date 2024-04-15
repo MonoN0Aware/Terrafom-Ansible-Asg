@@ -1,0 +1,9 @@
+  - name: Install Apache
+    ansible.builtin.yum:
+      name: httpd
+
+  - name: start httpd service
+    ansible.builtin.systemd:
+      state: restarted
+      enabled: yes
+      name: httpd

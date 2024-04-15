@@ -1,0 +1,7 @@
+---
+- name: Playbook for controlplane
+  ansible.builtin.import_playbook: "upolad.yml"
+
+- name:  Playbook for bastion
+  ansible.builtin.import_playbook: "asg.yaml"
+ 

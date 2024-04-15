@@ -1,0 +1,9 @@
+  - name: check if the webnode is already configured
+    become_user: root
+    ansible.builtin.stat:
+     path: /home/ec2-user/config_httpd.sh
+    register: index_html 
+   
+  - name: End the play if the webnode is already configured
+    meta: end_host
+    when: index_html.stat.exists == True

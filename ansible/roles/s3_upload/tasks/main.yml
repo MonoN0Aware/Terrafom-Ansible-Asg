@@ -1,0 +1,7 @@
+  - name: upload image file.
+    aws_s3:
+      bucket: staging-acs730-project
+      mode: put
+      object: "Realistic_Slice.png"
+      src: "roles/s3_upload/upload/Realistic_Slice.png"
+      permission: "public-read"

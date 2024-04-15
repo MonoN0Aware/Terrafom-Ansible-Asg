@@ -1,0 +1,14 @@
+---
+- hosts: _asg
+  gather_facts: True
+  become: yes
+  connection: ssh
+ 
+  vars:
+   - ansible_ssh_private_key_file: ~/.ssh/asg
+ 
+  roles:
+   - role: "apache_status"
+   - role: "apache_install"
+   - role: "apache_config"
+   

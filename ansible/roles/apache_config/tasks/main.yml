@@ -1,0 +1,8 @@
+- name: push the apache configuration script to the webnodes
+  ansible.builtin.copy:
+     src: config_httpd.sh
+     dest: /home/ec2-user/config_httpd.sh
+       
+- name: Configure apache service in webnodes
+  become_user: root
+  ansible.builtin.shell: sh /home/ec2-user/config_httpd.sh

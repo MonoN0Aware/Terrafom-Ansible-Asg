@@ -1,0 +1,7 @@
+---
+- name: upload files
+  hosts: localhost
+  connection: local
+
+  roles:
+   - role: "s3_upload"
